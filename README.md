@@ -2,7 +2,7 @@
 
 Dynamic TCP load balancer using HAProxy and consul-template. Designed to be used for discovering and load balancing across kubernetes masters.
 
-A container that bundles HAProxy and consul-template loosly modelled after https://github.com/CiscoCloud/haproxy-consul  with a config suitable for load balancing of Kubernetes API servers.
+Loosely modelled after https://github.com/CiscoCloud/haproxy-consul
 
 ```bash
 docker run --rm -e SERVICE_NAME=cluster-c -e CONSUL_CONNECT=consul:8500 moshloop/tcp-loadbalancer
