@@ -14,8 +14,10 @@ frontend kubernetes
 backend k8s-api
   balance roundrobin
   option tcp-check
+  mode tcp
+
   {{ range env "SERVICE_NAME" | service}}
-  server {{.ID}} {{ .Address }}:{{ .Port }}
+  server {{.ID}} {{ .Address }}:{{ .Port }} check fall 3 rise 2
   {{ end }}
 
 listen  stats
