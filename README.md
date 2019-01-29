@@ -1,6 +1,6 @@
 # tcp-loadbalancer
 
-Dynamic TCP load balancer using HAProxy and consul-template. Designed to be used for discovering and load balancing across kubernetes masters.
+Dynamic TCP load balancer using nginx and consul-template. Designed to be used for discovering and load balancing across kubernetes masters.
 
 Loosely modelled after https://github.com/CiscoCloud/haproxy-consul
 
